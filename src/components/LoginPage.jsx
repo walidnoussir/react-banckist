@@ -5,6 +5,7 @@ import Row from "../ui/Row";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { setAccount } from "../redux/accountSlice";
+import Guide from "./Guide";
 
 function LoginPage() {
   const navigate = useNavigate();
@@ -42,7 +43,8 @@ function LoginPage() {
         alt="loginImage"
       />
 
-      <form className="flex flex-col items-center w-[50%] h-[100%] justify-center gap-6">
+      <form className="flex flex-col items-center w-[50%] h-[100%] justify-center gap-6 space-y-5">
+        <Guide />
         <Row type="vertical">
           <label>Username</label>
           <LoginInput
